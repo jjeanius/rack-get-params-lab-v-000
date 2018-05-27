@@ -28,17 +28,17 @@ class Application
 
   def handle_search(search_term)
     if @@items.include?(search_term)
-      return "#{search_term} is one of our items"
+      resp.write "#{search_term} is one of our items"
     else
-      puts "Couldn't find #{search_term}"
+      resp.write "Couldn't find #{search_term}"
     end
   end
 
   def dispay_cart
     if @@cart.empty?
-      return "Your cart is empty!"
+      resp.write "Your cart is empty!"
     else
-      return "Your cart contains #{@@cart.join("\n")}"
+      resp.write "Your cart contains #{@@cart.join("\n")}"
     end
   end
 
