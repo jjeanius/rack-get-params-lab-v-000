@@ -36,9 +36,9 @@ class Application
 
   def dispay_cart
     if @@cart.empty?
-      resp.write "Your cart is empty!"
+      "Your cart is empty!"
     else
-      resp.write "Your cart contains #{@@cart.join("\n")}"
+      "Your cart contains #{@@cart.join("\n")}"
     end
   end
 
