@@ -10,10 +10,12 @@ class Application
     if req.path.match(/items/)
       @@items.each do |item|
         resp.write "#{item}\n"
+      end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
       resp.write handle_search(search_term)
     elsif req.path.match(/cart/)
+      seaerch_term = req.params["cart"]
       resp.write dispay_cart
     elsif req.path.match(/add/)
       item_to_add = req.param["item"]
