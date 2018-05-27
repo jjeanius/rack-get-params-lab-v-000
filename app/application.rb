@@ -43,11 +43,11 @@ class Application
   end
 
   def add_item(item_to_add)
-    if @@items.each.include?(item_to_add)
+    if @@items.include?(item_to_add)
       @@cart << item_to_add
-      return "#{item_to_add} has been added to the cart."
+      resp.write "#{item_to_add} has been added to the cart."
     else
-      return "We don't have that item"
+      resp.write "We don't have that item"
     end
   end
 end
