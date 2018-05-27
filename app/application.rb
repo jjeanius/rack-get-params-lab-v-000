@@ -22,17 +22,17 @@ class Application
     else
       resp.write "Path Not Found"
     end
-      return "Couldn't find #{search_term}"
+
+      resp.finish
+    end
+
+  def handle_search(search_term)
+    if @@items.include?(search_term)
+      return "#{search_term} is one of our items"
+    else
+      puts "Couldn't find #{search_term}"
     end
   end
-
-#  def handle_search(search_term)
-#    if @@items.include?(search_term)
-#      return "#{search_term} is one of our items"
-#    else
-#      puts "Couldn't find #{search_term}"
-#    end
-#  end
 
   def dispay_cart
     if @@cart.empty?
