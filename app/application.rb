@@ -17,7 +17,7 @@ class Application
     elsif req.path.match(/cart/)
       resp.write dispay_cart
     elsif req.path.match(/add/)
-      item_to_add = req.params["items"]
+      item_to_add = req.params["item"]
       resp.write add_item(item_to_add)
     else
       resp.write "Path Not Found"
