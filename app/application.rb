@@ -1,5 +1,5 @@
 class Application
-  
+
   @@cart = Array.new
   @@items = ["Apples","Carrots","Pears"]
 
