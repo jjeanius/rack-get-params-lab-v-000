@@ -37,7 +37,7 @@ class Application
 
   def dispay_cart
     if @@cart.empty?
-      return "cart is empty"
+      return "cart is empty!"
     else
       return "Your cart contains #{@@cart.join("\n")}"
     end
