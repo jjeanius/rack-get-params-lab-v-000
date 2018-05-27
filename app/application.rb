@@ -8,8 +8,8 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      @@items.each do |items|
-        resp.write "#{items}\n"
+      @@items.each do |item|
+        resp.write "#{item}\n"
       end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
@@ -17,7 +17,7 @@ class Application
     elsif req.path.match(/cart/)
       resp.write dispay_cart
     elsif req.path.match(/add/)
-      item_to_add = req.params["item"]
+      item_to_add = req.params["item_to_add"]
       resp.write add_item(item_to_add)
     else
       resp.write "Path Not Found"
