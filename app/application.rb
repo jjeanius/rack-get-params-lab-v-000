@@ -24,7 +24,6 @@ class Application
       resp.write "Path Not Found"
     end
       return "Couldn't find #{search_term}"
-      end
     end
   end
 
