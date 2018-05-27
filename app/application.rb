@@ -28,9 +28,9 @@ class Application
 
   def handle_search(search_term)
     if @@items.include?(search_term)
-      resp.write "#{search_term} is one of our items"
+      "#{search_term} is one of our items"
     else
-      resp.write "Couldn't find #{search_term}"
+      "Couldn't find #{search_term}"
     end
   end
 
